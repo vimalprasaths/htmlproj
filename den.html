@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Document</title>
+  <style>
+    .red {
+      background-color: antiquewhite; /* Only one value remains */
+      border: solid;
+    }
+
+    @media screen and (orientation: landscape) {
+      .red::after {
+        content: "Landscape";
+        display: block;
+        color: green;
+      }
+    }
+
+    @media screen and (orientation: portrait) {
+      .red::after {
+        content: "Portrait";
+        display: block;
+        color: blue;
+      }
+    }
+
+    @media screen and (min-width: 500px) {
+      .red {
+        background-color: aqua;
+      }
+    }
+
+    @media screen and (max-width: 700px) {
+      .red {
+        background-color: beige;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="red">
+    <form>
+      <label for="first">First Name</label>
+      <input type="text" id="first" /><br />
+
+      <label for="last">Last Name</label>
+      <input type="text" id="last" /><br />
+
+      <label for="pass">Password</label>
+      <input type="password" id="pass" /><br />
+
+      <label for="conf">Confirm Password</label>
+      <input type="password" id="conf" /><br />
+
+      <input type="submit" />
+    </form>
+  </div>
+</body>
+</html>

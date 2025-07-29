@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Media Query Orientation</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: lightgray;
+      text-align: center;
+      padding: 20px;
+    }
+
+    .box {
+      padding: 50px;
+      background-color: teal;
+      color: white;
+      font-size: 24px;
+    }
+
+    /* Portrait mode (default) */
+    @media (orientation: portrait) {
+      .box {
+        background-color: tomato;
+        content: "Portrait mode";
+      }
+    }
+
+    /* Landscape mode */
+    @media (orientation: landscape) {
+      .box {
+        background-color: royalblue;
+        content: "Landscape mode";
+      }
+    }
+
+    /* When width is more than 500px — typically landscape */
+    @media (min-width: 500px) {
+      .box {
+        background-color: forestgreen;
+        font-size: 30px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="box">Orientation & Width Check</div>
+</body>
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Display Types Example</title>
+  <style>
+    /* Common styles */
+    .box {
+      border: 2px solid black;
+      padding: 10px;
+      margin: 5px;
+      text-align: center;
+      background-color: lightgray;
+    }
+
+    /* Inline-block */
+    .inline-box {
+      display: inline-block;
+      width: 150px;
+      background-color: lightblue;
+    }
+
+    /* Block */
+    .block-box {
+      display: block;
+      width: 200px;
+      background-color: lightgreen;
+    }
+
+    /* Flex */
+    .flex-container {
+      display: flex;
+      gap: 10px;
+      background-color: lavender;
+      padding: 10px;
+    }
+
+    .flex-box {
+      width: 100px;
+      background-color: lightcoral;
+    }
+
+    /* Grid */
+    .grid-container {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+      background-color: beige;
+      padding: 10px;
+    }
+
+    .grid-box {
+      background-color: khaki;
+    }
+
+    /* None */
+    .none-box {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Display: inline-block</h2>
+  <div class="box inline-box">Box 1</div>
+  <div class="box inline-box">Box 2</div>
+  <div class="box inline-box">Box 3</div>
+
+  <h2>Display: block</h2>
+  <div class="box block-box">Block 1</div>
+  <div class="box block-box">Block 2</div>
+
+  <h2>Display: flex</h2>
+  <div class="flex-container">
+    <div class="box flex-box">Flex 1</div>
+    <div class="box flex-box">Flex 2</div>
+    <div class="box flex-box">Flex 3</div>
+  </div>
+
+  <h2>Display: grid</h2>
+  <div class="grid-container">
+    <div class="box grid-box">Grid 1</div>
+    <div class="box grid-box">Grid 2</div>
+    <div class="box grid-box">Grid 3</div>
+    <div class="box grid-box">Grid 4</div>
+  </div>
+
+  <h2>Display: none</h2>
+  <div class="box none-box">You can't see me (display: none)</div>
+
+</body>
+</html>
